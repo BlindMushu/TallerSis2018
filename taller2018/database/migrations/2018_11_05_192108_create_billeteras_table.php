@@ -19,6 +19,7 @@ class CreateBilleterasTable extends Migration
             $table->bigInteger('numeroTarjeta');
             $table->string('banco',25);
             $table->decimal('saldo',10,5);
+            $table->integer('tx_usuario_id');
             $table->timestamps();
         });
     }

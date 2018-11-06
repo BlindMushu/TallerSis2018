@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b5f0420-214d-46f4-a466-5b7a0f102af3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/taller2018/app/Comment.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/app/Helpers/FormatTime.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/app/Http/Controllers/HomeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/app/Http/Controllers/VideoController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/app/Providers/FormatTimeServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/app/Video.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/taller2018/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/taller2018/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/taller2018/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/database/migrations/2018_10_21_201935_create_videos_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/database/migrations/2018_10_22_014735_create_comments_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/public/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/resources/views/auth/login.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/resources/views/auth/passwords/email.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/resources/views/auth/passwords/reset.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/resources/views/auth/register.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/resources/views/auth/verify.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/resources/views/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/resources/views/layouts/app.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/resources/views/video/createVideo.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/resources/views/video/detail.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/taller2018/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taller2018/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/taller2018/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller2018/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/taller2018/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192108_create_billeteras_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192108_create_billeteras_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +31,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="env" value="2" />
+          <entry key="gitignore" value="1" />
           <entry key="html" value="4" />
           <entry key="php" value="22" />
           <entry key="png" value="1" />
@@ -64,19 +44,20 @@
           <entry key="HTML" value="4" />
           <entry key="Image" value="1" />
           <entry key="PHP" value="16" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="39" />
-          <entry key="php" value="2363" />
+          <entry key="php" value="2403" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="39" />
           <entry key="Blade" value="583" />
-          <entry key="PHP" value="1780" />
+          <entry key="PHP" value="1820" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.rename.constructor" />
@@ -99,20 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192317_create_ingresos_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_193001_create_vacunas_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -129,8 +101,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192108_create_billeteras_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+            <state relative-caret-position="256">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/taller2018/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -197,7 +178,6 @@
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192253_create_experiencias_table.php" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_193001_create_vacunas_table.php" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192542_create_sucursales_table.php" />
-        <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192108_create_billeteras_table.php" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192158_create_depositos_table.php" />
         <option value="$PROJECT_DIR$/taller2018/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192507_create_retiros_table.php" />
@@ -205,6 +185,8 @@
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192350_create_reembolsos_table.php" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192229_create_detalles_table.php" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192317_create_ingresos_table.php" />
+        <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192108_create_billeteras_table.php" />
+        <option value="$PROJECT_DIR$/taller2018/.gitignore" />
       </list>
     </option>
   </component>
@@ -417,12 +399,12 @@
       <workItem from="1541061398085" duration="1833000" />
       <workItem from="1541386016204" duration="5175000" />
       <workItem from="1541443601324" duration="4268000" />
-      <workItem from="1541458127408" duration="3064000" />
+      <workItem from="1541458127408" duration="4033000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22502000" />
+    <option name="totallyTimeSpent" value="23471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="885" height="915" extended-state="6" />
@@ -542,13 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192108_create_billeteras_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192028_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -563,6 +538,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_11_05_192108_create_billeteras_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
