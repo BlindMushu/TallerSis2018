@@ -29,6 +29,8 @@ class CreateUsersTable extends Migration
             $table->string('calle',25);
             $table->string('numero_puerta',25);
             $table->string('direccion',100);
+            $table->string('tarjeta_debito',50);
+            $table->string('banco',25);
             $table->integer('numero_canes');
             $table->integer('telefono');
             $table->string('habilitado');
