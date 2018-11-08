@@ -72,8 +72,8 @@
             <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 col-md-6">
-                        <h1 class="text-white">Bienvenido a DogCare!</h1>
-                        <p class="text-lead text-light">Inicia sesion con tu cuenta de DogCare.</p>
+                        <h1 class="text-white">Cambiar su contraseña</h1>
+                        <p class="text-lead text-light">Ingresa tu correo de DogCare.</p>
                     </div>
                 </div>
             </div>
