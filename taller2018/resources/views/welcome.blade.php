@@ -166,7 +166,7 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-5 mb-5 mb-lg-0">
                     <h1 class="text-white font-weight-light">DogCare</h1>
-                    <p class="lead text-white mt-4">DogCare es un sitio web donde permite que contactar a propietarios y cuidadores con experiencia. Con la ayuda de DogCare cada propietario podra encontrar el cuidador ideal para su mascota.</p>
+                    <p class="lead text-white mt-4">DogCare es un sitio web que permite contactar a propietarios con cuidadores experimentados. Con la ayuda de DogCare cada propietario podra encontrar el cuidador ideal para su mascota.</p>
                 </div>
                 <div class="col-lg-6 mb-lg-auto">
                     <div class="rounded shadow-lg overflow-hidden transform-perspective-right">
@@ -216,7 +216,7 @@
                 <a target="_blank" href="#" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip" data-original-title="Follow us">
                     <i class="fa fa-twitter"></i>
                 </a>
-                <a target="_blank" href="#" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip" data-original-title="Like us">
+                <a target="_blank" href="https://www.facebook.com/DogCare-289764385204995/" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip" data-original-title="Like us">
                     <i class="fa fa-facebook-square"></i>
                 </a>
                 <a target="_blank" href="#" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip" data-original-title="Star on Github">
