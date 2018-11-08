@@ -15,12 +15,15 @@ class CreateDepositosTable extends Migration
     {
         Schema::create('depositos', function (Blueprint $table) {
             $table->increments('id');
-            $table->int('billetera_id');
-            $table->string('fotoComprobante');
+            $table->integer('billetera_id');
+            $table->string('foto_comprobante');
             $table->decimal('monto',10,5);
             $table->timestamp('fecha');
-            $table->foreign('billetera_id')->references('id')->on('billeteras');
+            $table->integer('tx_usuario_id');
+            $table->string('tx_host',25);
+            $table->integer('tx_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -15,7 +15,15 @@ class CreatePuntuacionesTable extends Migration
     {
         Schema::create('puntuaciones', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('usuario_id');
+            $table->integer('servicio_id');
+            $table->decimal('puntuacion',10,5);
+            $table->integer('tx_usuario_id');
+            $table->string('tx_host',25);
+            $table->integer('tx_id');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

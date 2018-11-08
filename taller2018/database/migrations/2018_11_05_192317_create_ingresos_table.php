@@ -16,8 +16,12 @@ class CreateIngresosTable extends Migration
         Schema::create('ingresos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('servicio_id');
-            $table->integer('total',10,5);
+            $table->decimal('total',10,5);
+            $table->integer('tx_usuario_id');
+            $table->string('tx_host',25);
+            $table->integer('tx_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -15,7 +15,16 @@ class CreateDescripcionesTable extends Migration
     {
         Schema::create('descripciones', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('descripcion');
+            $table->string('foto_personal',50);
+            $table->string('tipo_casa',25);
+            $table->string('ci',25);
+            $table->string('foto_ci',50);
+            $table->boolean('jardin');
+            $table->boolean('terraza');
+            $table->boolean('balcon');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

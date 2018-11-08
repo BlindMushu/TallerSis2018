@@ -18,6 +18,7 @@ class CreateExperienciasTable extends Migration
             $table->string('trabajo',50);
             $table->string('alojamiento',50);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

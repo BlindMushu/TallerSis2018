@@ -18,8 +18,8 @@ class CreateDetallesTable extends Migration
             $table->integer('canino_id');
             $table->string('nombre',25);
             $table->string('descripcion',25);
-            $table->foreign('canino_id')->references('id')->on('caninos');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

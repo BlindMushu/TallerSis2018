@@ -15,11 +15,13 @@ class CreateRetirosTable extends Migration
     {
         Schema::create('retiros', function (Blueprint $table) {
             $table->increments('id');
-            $table->int('billetera_id');
+            $table->integer('billetera_id');
             $table->decimal('monto',10,5);
-            $table->timestamp('fecha');
-
+            $table->integer('tx_usuario_id');
+            $table->string('tx_host',25);
+            $table->integer('tx_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

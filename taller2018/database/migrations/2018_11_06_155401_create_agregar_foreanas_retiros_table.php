@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRegistrovacunasTable extends Migration
+class CreateAgregarForeanasRetirosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateRegistrovacunasTable extends Migration
      */
     public function up()
     {
-        Schema::create('registrovacunas', function (Blueprint $table) {
-            $table->integer('canino_id');
-            $table->integer('vacuna_id');
-            $table->string('alergias');
-            $table->timestamps();
-            $table->softDeletes();
 
+        Schema::table('retiros', function ($table) {
+            $table->foreign('billetera_id')->references('id')->on('billeteras');
         });
     }
 
@@ -30,6 +26,6 @@ class CreateRegistrovacunasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('registrovacunas');
+        Schema::dropIfExists('agregar_foreanas_retiros');
     }
 }

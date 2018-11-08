@@ -17,9 +17,11 @@ class CreateReembolsosTable extends Migration
             $table->increments('id');
             $table->integer('billetera_id');
             $table->decimal('monto',10,5);
-            $table->timestamp('fecha');
-            $table->foreign('billetera_id')->references('id')->on('billeras');
+            $table->integer('tx_usuario_id');
+            $table->string('tx_host',25);
+            $table->integer('tx_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

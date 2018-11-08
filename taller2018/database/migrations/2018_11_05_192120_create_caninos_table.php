@@ -15,7 +15,18 @@ class CreateCaninosTable extends Migration
     {
         Schema::create('caninos', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('usuario_id');
+            $table->string('nombre',25);
+            $table->string('foto',50);
+            $table->string('raza',25);
+            $table->date('nacimiento');
+            $table->boolean('genero');
+            $table->boolean('agresivo');
+            $table->decimal('peso',10,5);
+            $table->text('tipo_comida');
+            $table->text('extras');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
