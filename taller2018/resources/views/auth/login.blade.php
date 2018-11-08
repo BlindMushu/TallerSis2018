@@ -45,25 +45,19 @@
                 <!-- Navbar items -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link nav-link-icon" href="../index.html">
-                            <i class="ni ni-planet"></i>
-                            <span class="nav-link-inner--text">Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-icon" href="../examples/register.html">
+                        <a class="nav-link nav-link-icon" href="./register">
                             <i class="ni ni-circle-08"></i>
-                            <span class="nav-link-inner--text">Register</span>
+                            <span class="nav-link-inner--text">Registrar</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-icon" href="../examples/login.html">
+                        <a class="nav-link nav-link-icon" href="./login">
                             <i class="ni ni-key-25"></i>
-                            <span class="nav-link-inner--text">Login</span>
+                            <span class="nav-link-inner--text">Iniciar Sesion</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-icon" href="../examples/profile.html">
+                        <a class="nav-link nav-link-icon" href=".">
                             <i class="ni ni-single-02"></i>
                             <span class="nav-link-inner--text">Profile</span>
                         </a>
@@ -170,26 +164,10 @@
 <footer class="py-5">
     <div class="container">
         <div class="row align-items-center justify-content-xl-between">
-            <div class="col-xl-6">
+            <div class="col-xl-12">
                 <div class="copyright text-center text-xl-left text-muted">
-                    &copy; 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+                    &copy; 2018
                 </div>
-            </div>
-            <div class="col-xl-6">
-                <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-                    <li class="nav-item">
-                        <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
