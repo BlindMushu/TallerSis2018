@@ -16,7 +16,7 @@ class CreateAgregarForeanasTable extends Migration
         Schema::table('users', function ($table) {
             $table->foreign('descripcion_id')->references('id')->on('descripciones');
             $table->foreign('experiencia_id')->references('id')->on('experiencias');
-            $table->foreign('sucursal_id')->references('id')->on('sucursales');
+            //$table->foreign('sucursal_id')->references('id')->on('sucursales');
         });
 
 

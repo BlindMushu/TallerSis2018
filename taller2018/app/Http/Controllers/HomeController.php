@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Canino;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $caninos = Canino::orderBy('nacimiento','desc')->paginate(5);
+
+        return view('home', array(
+            'caninos' => $caninos
+        ));
     }
 }

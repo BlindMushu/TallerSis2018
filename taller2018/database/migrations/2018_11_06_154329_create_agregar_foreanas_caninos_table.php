@@ -14,7 +14,7 @@ class CreateAgregarForeanasCaninosTable extends Migration
     public function up()
     {
         Schema::table('caninos', function ($table) {
-            $table->foreign('usuario_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

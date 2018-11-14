@@ -18,3 +18,37 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/crearUsuario',array(
+    'as' => 'createUserPropietario',
+    'uses' => 'UserController@createUserPropietario'
+));
+
+Route::post('/registerPropietario',array(
+    'as' => 'savePropietario',
+    'uses' => 'UserController@saveUserPropietario'
+));
+
+Route::get('/editarUsuario',array(
+    'as' => 'editPropietario',
+    'middleware' => 'auth',
+    'uses' => 'UserController@editUserPropietario'
+));
+
+Route::post('/actualizarUsuario',array(
+    'as' => 'updatePropietario',
+    'middleware' => 'auth',
+    'uses' => 'UserController@updateUserPropietario'
+));
+
+Route::get('/crearCanino',array(
+    'as' => 'createCanino',
+    'middleware' => 'auth',
+    'uses' => 'CaninoController@createCanino'
+));
+
+Route::post('/registerCanino', array(
+    'as' => 'saveCanino',
+    'middleware' => 'auth',
+    'uses' => 'CaninoController@saveCanino'
+));

@@ -34,7 +34,7 @@
                 <div class="navbar-collapse-header">
                     <div class="row">
                         <div class="col-6 collapse-brand">
-                            <a href="./index.html">
+                            <a href="./">
                                 <img src="./assets2/img/brand/blue.png">
                             </a>
                         </div>
@@ -63,7 +63,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-icon" href="./register">Registrarse
+                        <a class="nav-link nav-link-icon" href="./crearUsuario">Registrarse
                             <span class="nav-link-inner--text d-lg-none"></span>
                         </a>
                     </li>
@@ -95,7 +95,7 @@
                             <img src="./assets2/img/brand/white.png" style="width: 200px;" class="img-fluid">
                             <p class="lead text-white"><font size="18">Encuentra al cuidador perfecto para tu mascota.</font></p>
                             <div class="btn-wrapper mt-5">
-                                <a href="./register" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
+                                <a href="./crearUsuario" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
                                     <span class="btn-inner--icon"><i class="ni ni-circle-08"></i></span>
                                     <span class="btn-inner--text">Registrarse</span>
                                 </a>

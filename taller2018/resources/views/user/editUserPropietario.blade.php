@@ -208,9 +208,9 @@
         <div class="container-fluid d-flex align-items-center">
             <div class="row">
                 <div class="col-lg-7 col-md-10">
-                    <h1 class="display-2 text-white">Hola {{ Auth::user()->name }} {{ Auth::user()->apellido }} </h1>
+                    <h1 class="display-2 text-white">Hola {{ Auth::user()->name }} {{ Auth::user()->apellido }}</h1>
                     <p class="text-white mt-0 mb-5"></p>
-                    <a href="./crearCanino" class="btn btn-info">Mascotas</a>
+                    <a href="#" class="btn btn-info">Mascotas</a>
                 </div>
             </div>
         </div>
@@ -220,83 +220,6 @@
         <div class="row">
             <div class="col-xl-6 order-xl-2 mb-5 mb-xl-0">
                 <div class="card card-profile shadow">
-                    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-                        <div class="d-flex justify-content-between">
-                            <h3 class="mb-0">MASCOTAS</h3>
-                            <a href="crearCanino" class="btn btn-sm btn-default float-right">Agregar</a>
-                        </div>
-                    </div>
-                    <div class="card-body pt-0 pt-md-4">
-                        <div class="card-body">
-                            <hr class="my-4" />
-                            <div class="row">
-                                <div class="col">
-                                    <div class="card-header border-0">
-                                        <h3 class="mb-0">Listado Mascotas</h3>
-                                    </div>
-                                    <div class="table-responsive">
-                                        <table class="table align-items-center table-flush">
-                                            <thead class="thead-light">
-                                            <tr>
-                                                <th scope="col">Nombre</th>
-                                                <th scope="col">Raza</th>
-                                                <th scope="col">Fecha de Nacimiento</th>
-                                                <th scope="col"></th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach($caninos as $canino)
-                                                    @if(Auth::check() && Auth::user()->id == $canino->user->id)
-                                                    <tr>
-                                                        <th scope="row">
-                                                            <div class="media align-items-center">
-                                                                <a href="#" class="avatar rounded-circle mr-3">
-                                                                    <img alt="Image placeholder" src="../assets/img/theme/bootstrap.jpg">
-                                                                </a>
-                                                                <div class="media-body">
-                                                                    <span class="mb-0 text-sm">{{$canino->nombre}}</span>
-                                                                </div>
-                                                            </div>
-                                                        </th>
-                                                        <td>
-                                                            {{$canino->raza}}
-                                                        </td>
-                                                        <td>
-                                                            {{$canino->nacimiento}}
-                                                        </td>
-                                                        <td class="text-right">
-                                                            <div class="dropdown">
-                                                                <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                    <i class="fas fa-ellipsis-v"></i>
-                                                                </a>
-                                                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                                    <a class="dropdown-item" href="#">Action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    @endif
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="card-footer py-4">
-                                        <nav aria-label="...">
-                                            <ul class="pagination justify-content-end mb-0">
-                                                {{$caninos->links()}}
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 order-xl-1">
-                <div class="card bg-secondary shadow">
                     <div class="row justify-content-center">
                         <div class="col-lg-3 order-lg-2">
                             <div class="card-profile-image">
@@ -308,12 +231,64 @@
                     </div>
                     <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                         <div class="d-flex justify-content-between">
-                            <h3 class="mb-0">DATOS PERSONALES</h3>
-                            <a href="/editarUsuario" class="btn btn-sm btn-default float-right">Editar</a>
+                            <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
+                            <a href="#" class="btn btn-sm btn-default float-right">Message</a>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0 pt-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                                    <div>
+                                        <span class="heading">22</span>
+                                        <span class="description">Friends</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">10</span>
+                                        <span class="description">Photos</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">89</span>
+                                        <span class="description">Comments</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h3>
+                                Jessica Jones<span class="font-weight-light">, 27</span>
+                            </h3>
+                            <div class="h5 font-weight-300">
+                                <i class="ni location_pin mr-2"></i>Bucharest, Romania
+                            </div>
+                            <div class="h5 mt-4">
+                                <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
+                            </div>
+                            <div>
+                                <i class="ni education_hat mr-2"></i>University of Computer Science
+                            </div>
+                            <hr class="my-4" />
+                            <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>
+                            <a href="#">Show more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 order-xl-1">
+                <div class="card bg-secondary shadow">
+                    <div class="card-header bg-white border-0">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">DATOS PERSONALES</h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <a href="/editarUsuario" class="btn btn-sm btn-primary">Editar</a>
+                            </div>
                         </div>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="POST" action="{{ route('updatePropietario') }}">
+                            @csrf
                             <h4 class="text-muted mb-4">Perfil Propietario</h4>
                             <h6 class="heading-small text-muted mb-4">Informacion de usuario</h6>
                             <div class="pl-lg-4">
@@ -321,7 +296,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="name">{{ __('Nombres') }}</label>
-                                            <input type="text" id="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ Auth::user()->name }}" placeholder="Nombres" pattern="[a-zA-Z ]+" disabled required autofocus>
+                                            <input type="text" id="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ Auth::user()->name }}" placeholder="Nombres" pattern="[a-zA-Z ]+" required autofocus>
                                             @if ($errors->has('name'))
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $errors->first('name') }}</strong>
@@ -332,7 +307,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="apellido">{{ __('Apellidos') }}</label>
-                                            <input type="text" id="apellido" class="form-control{{ $errors->has('apellido') ? ' is-invalid' : '' }}" name="apellido" value="{{ Auth::user()->apellido }}" pattern="[a-zA-Z ]+" disabled placeholder="Apellidos" required>
+                                            <input type="text" id="apellido" class="form-control{{ $errors->has('apellido') ? ' is-invalid' : '' }}" name="apellido" value="{{ Auth::user()->apellido }}" pattern="[a-zA-Z ]+" placeholder="Apellidos" required>
                                             @if ($errors->has('apellido'))
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $errors->first('apellido') }}</strong>
@@ -345,7 +320,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="form-control-label" for="email">Correo electronico</label>
-                                            <input type="email" id="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ Auth::user()->email }}" placeholder="jesse@example.com" disabled required>
+                                            <input type="email" id="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ Auth::user()->email }}" placeholder="jesse@example.com" required>
                                             @if ($errors->has('email'))
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $errors->first('email') }}</strong>
@@ -360,6 +335,25 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="password">{{ __('Contraseña') }}</label>
+                                            <input type="password" id="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Contraseña" required>
+                                            @if ($errors->has('password'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('password') }}</strong>
+                                                </span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="password-confirm">{{ __('Confirme la contraseña') }}</label>
+                                            <input type="password" id="password-confirm" class="form-control" name="password_confirmation" placeholder="Contraseña" required>
+                                        </div>
+                                    </div>
+                                </div>
                                 <hr class="my-4" />
                                 <h6 class="heading-small text-muted mb-4">Informacion de contacto</h6>
                                 <div class="pl-lg-4">
@@ -367,7 +361,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="departamento">{{ __('Departamento') }}</label>
-                                                <input type="text" id="departamento" class="form-control{{ $errors->has('departamento') ? ' is-invalid' : '' }}" name="departamento" value="{{ Auth::user()->departamento }}" pattern="[a-zA-Z ]+" placeholder="Apellidos" required disabled>
+                                                <input type="text" id="departamento" class="form-control{{ $errors->has('departamento') ? ' is-invalid' : '' }}" name="departamento" value="{{ Auth::user()->departamento }}" pattern="[a-zA-Z ]+" placeholder="Apellidos" required>
                                                 @if ($errors->has('departamento'))
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $errors->first('departamento') }}</strong>
@@ -378,7 +372,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="zona">{{ __('Zona') }}</label>
-                                                <input type="text" id="zona" class="form-control{{ $errors->has('zona') ? ' is-invalid' : '' }}" name="zona" value="{{ Auth::user()->zona }}" placeholder="Zona" pattern="[a-zA-Z0-9 ]+" disabled required>
+                                                <input type="text" id="zona" class="form-control{{ $errors->has('zona') ? ' is-invalid' : '' }}" name="zona" value="{{ Auth::user()->zona }}" placeholder="Zona" pattern="[a-zA-Z0-9 ]+" required>
                                                 @if ($errors->has('zona'))
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $errors->first('zona') }}</strong>
@@ -389,7 +383,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="calle">{{ __('Calle') }}</label>
-                                                <input type="text" id="calle" class="form-control{{ $errors->has('calle') ? ' is-invalid' : '' }}" name="calle" value="{{ Auth::user()->calle }}" placeholder="Calle" pattern="[a-zA-Z0-9 ]+" disabled required>
+                                                <input type="text" id="calle" class="form-control{{ $errors->has('calle') ? ' is-invalid' : '' }}" name="calle" value="{{ Auth::user()->calle }}" placeholder="Calle" pattern="[a-zA-Z0-9 ]+" required>
                                                 @if ($errors->has('calle'))
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $errors->first('calle') }}</strong>
@@ -400,7 +394,7 @@
                                         <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="numero_puerta">{{ __('Numero de puerta') }}</label>
-                                                <input type="text" id="numero_puerta" class="form-control{{ $errors->has('numero_puerta') ? ' is-invalid' : '' }}" name="numero_puerta" value="{{ Auth::user()->numero_puerta }}" placeholder="Numero de Puerta" pattern="[a-zA-Z0-9 ]+" disabled required>
+                                                <input type="text" id="numero_puerta" class="form-control{{ $errors->has('numero_puerta') ? ' is-invalid' : '' }}" name="numero_puerta" value="{{ Auth::user()->numero_puerta }}" placeholder="Numero de Puerta" pattern="[a-zA-Z0-9 ]+" required>
                                                 @if ($errors->has('numero_puerta'))
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $errors->first('numero_puerta') }}</strong>
@@ -413,7 +407,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="direccion">{{ __('Direccion') }}</label>
-                                                <input type="text" id="direccion" class="form-control{{ $errors->has('direccion') ? ' is-invalid' : '' }}" name="direccion" value="{{ Auth::user()->direccion }}" placeholder="Direccion" pattern="[a-zA-Z0-9., ]+" disabled required>
+                                                <input type="text" id="direccion" class="form-control{{ $errors->has('direccion') ? ' is-invalid' : '' }}" name="direccion" value="{{ Auth::user()->direccion }}" placeholder="Direccion" pattern="[a-zA-Z0-9., ]+" required>
                                                 @if ($errors->has('direccion'))
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $errors->first('direccion') }}</strong>
@@ -424,7 +418,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-control-label" for="telefono">{{ __('Telefono') }}</label>
-                                                <input type="number" id="telefono" class="form-control{{ $errors->has('telefono') ? ' is-invalid' : '' }}" name="telefono" value="{{ Auth::user()->telefono }}" placeholder="Telefono" pattern="[0-9]+" disabled required>
+                                                <input type="number" id="telefono" class="form-control{{ $errors->has('telefono') ? ' is-invalid' : '' }}" name="telefono" value="{{ Auth::user()->telefono }}" placeholder="Telefono" pattern="[0-9]+" required>
                                                 @if ($errors->has('telefono'))
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $errors->first('telefono') }}</strong>
@@ -433,6 +427,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0">
+                                <div class="col-md-12 offset-md-5">
+                                    <button type="submit" class="btn btn-primary">
+                                        {{ __('Editar') }}
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -461,5 +462,3 @@
 </body>
 
 </html>
-
-
