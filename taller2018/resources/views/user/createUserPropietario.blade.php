@@ -267,127 +267,207 @@
                                 </div>
                                 <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
                                     <div class="card-body">
-                                        <form>
+                                        <form method="POST" action="{{ route('savePropietario') }}">
+                                            @csrf
+                                            <h4 class="text-muted mb-4">Perfil Cuidador</h4>
                                             <h6 class="heading-small text-muted mb-4">Informacion de usuario</h6>
                                             <div class="pl-lg-4">
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <label class="form-control-label" for="nombre">Nombre</label>
-                                                            <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Nombre">
+                                                            <label class="form-control-label" for="name">{{ __('Nombres') }}</label>
+                                                            <input type="text" id="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder="Nombres" pattern="[a-zA-Z ]+" required autofocus>
+                                                            @if ($errors->has('name'))
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong>{{ $errors->first('name') }}</strong>
+                                                                </span>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <label class="form-control-label" for="apellido">Apellidos</label>
-                                                            <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Apellido">
+                                                            <label class="form-control-label" for="apellido">{{ __('Apellidos') }}</label>
+                                                            <input type="text" id="apellido" class="form-control{{ $errors->has('apellido') ? ' is-invalid' : '' }}" name="apellido" value="{{ old('apellido') }}" pattern="[a-zA-Z ]+" placeholder="Apellidos" required>
+                                                            @if ($errors->has('apellido'))
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong>{{ $errors->first('apellido') }}</strong>
+                                                                </span>
+                                                            @endif
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4">
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <label class="form-control-label" for="correo">Correo electronico</label>
-                                                            <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="correo@ejemplo.com">
+                                                            <label class="form-control-label" for="email">Correo electronico</label>
+                                                            <input type="email" id="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="jesse@example.com" required>
+                                                            @if ($errors->has('email'))
+                                                                <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $errors->first('email') }}</strong>
+                                                            </span>
+                                                            @endif
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="form-group">
-                                                            <label class="form-control-label" for="password">Contraseña</label>
-                                                            <input type="password" id="password" class="form-control form-control-alternative" placeholder="Contraseña">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
+                                                    <div class="col-lg-6">
                                                         <div class="form-group">
                                                             <label class="form-control-label" for="tipo_usuario">Tipo de usuario</label>
                                                             <input type="text" id="tipo_usuario" class="form-control form-control-alternative" value="Cuidador" disabled>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label class="form-control-label" for="password">{{ __('Contraseña') }}</label>
+                                                            <input type="password" id="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Contraseña" required>
+                                                            @if ($errors->has('password'))
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong>{{ $errors->first('password') }}</strong>
+                                                                </span>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label class="form-control-label" for="password-confirm">{{ __('Confirmación de contraseña') }}</label>
+                                                            <input type="password" id="password-confirm" class="form-control" name="password_confirmation" placeholder="Contraseña" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <hr class="my-4" />
-                                            <!-- Address -->
                                             <h6 class="heading-small text-muted mb-4">Informacion de contacto</h6>
                                             <div class="pl-lg-4">
                                                 <div class="row">
                                                     <div class="col-lg-3">
                                                         <div class="form-group">
-                                                            <label class="form-control-label" for="departamento">Departamento</label>
-                                                            <input type="text" id="departamento" class="form-control form-control-alternative" placeholder="Departamento">
+                                                            <label class="form-control-label" for="departamento">{{ __('Departamento') }}</label>
+                                                            <input type="text" id="departamento" class="form-control{{ $errors->has('departamento') ? ' is-invalid' : '' }}" name="departamento" value="{{ old('departamento') }}" pattern="[a-zA-Z ]+" placeholder="Apellidos" required>
+
+                                                            @if ($errors->has('departamento'))
+                                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('departamento') }}</strong>
+                                                </span>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-3">
                                                         <div class="form-group">
-                                                            <label class="form-control-label" for="zona">Zona</label>
-                                                            <input type="text" id="zona" class="form-control form-control-alternative" placeholder="Zona">
+                                                            <label class="form-control-label" for="zona">{{ __('Zona') }}</label>
+                                                            <input type="text" id="zona" class="form-control{{ $errors->has('zona') ? ' is-invalid' : '' }}" name="zona" value="{{ old('zona') }}" placeholder="Zona" pattern="[a-zA-Z0-9 ]+" required>
+                                                            @if ($errors->has('zona'))
+                                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('zona') }}</strong>
+                                                </span>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-3">
                                                         <div class="form-group">
-                                                            <label class="form-control-label" for="calle">Calle</label>
-                                                            <input type="text" id="calle" class="form-control form-control-alternative" placeholder="Calle">
+                                                            <label class="form-control-label" for="calle">{{ __('Calle') }}</label>
+                                                            <input type="text" id="calle" class="form-control{{ $errors->has('calle') ? ' is-invalid' : '' }}" name="calle" value="{{ old('calle') }}" placeholder="Calle" pattern="[a-zA-Z0-9 ]+" required>
+                                                            @if ($errors->has('calle'))
+                                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('calle') }}</strong>
+                                                </span>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-3">
                                                         <div class="form-group">
-                                                            <label class="form-control-label" for="numero_puerta">Numero de puerta</label>
-                                                            <input type="text" id="numero_puerta" class="form-control form-control-alternative" placeholder="#">
+                                                            <label class="form-control-label" for="numero_puerta">{{ __('Numero de puerta') }}</label>
+                                                            <input type="text" id="numero_puerta" class="form-control{{ $errors->has('numero_puerta') ? ' is-invalid' : '' }}" name="numero_puerta" value="{{ old('numero_puerta') }}" placeholder="Numero de Puerta" pattern="[a-zA-Z0-9 ]+" required>
+                                                            @if ($errors->has('numero_puerta'))
+                                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('numero_puerta') }}</strong>
+                                                </span>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label class="form-control-label" for="direccion">Direccion</label>
-                                                            <input id="input-address" class="form-control form-control-alternative" placeholder="Direccion" >
+                                                            <label class="form-control-label" for="direccion">{{ __('Direccion') }}</label>
+                                                            <input type="text" id="direccion" class="form-control{{ $errors->has('direccion') ? ' is-invalid' : '' }}" name="direccion" value="{{ old('direccion') }}" placeholder="Direccion" pattern="[a-zA-Z0-9., ]+" required>
+                                                            @if ($errors->has('direccion'))
+                                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('direccion') }}</strong>
+                                                </span>
+                                                            @endif
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label class="form-control-label" for="telefono">Telefono</label>
-                                                            <input id="input-address" class="form-control form-control-alternative" placeholder="Telefono" >
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <div class="form-group">
-                                                            <label class="form-control-label" for="estadodecuenta">Estado de Cuenta</label>
-                                                            <input type="text" id="tipo_usuario" class="form-control form-control-alternative" value="Solicitando" disabled>
+                                                            <label class="form-control-label" for="telefono">{{ __('Telefono') }}</label>
+                                                            <input type="number" id="telefono" class="form-control{{ $errors->has('telefono') ? ' is-invalid' : '' }}" name="telefono" value="{{ old('telefono') }}" placeholder="Telefono" pattern="[0-9]+" required>
+                                                            @if ($errors->has('telefono'))
+                                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('telefono') }}</strong>
+                                                </span>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <hr class="my-4" />
-                                            <!-- Address -->
-                                            <h6 class="heading-small text-muted mb-4">Experiencias</h6>
+                                            <h6 class="heading-small text-muted mb-4">Datos adicionales</h6>
                                             <div class="pl-lg-4">
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <label class="form-control-label" for="aniosdetrabajo">Años de Trabajo</label>
-                                                            <input type="text" id="departamento" class="form-control form-control-alternative" placeholder="#">
+                                                            <label class="form-control-label" for="experiencia">{{ __('Experiencia') }}</label>
+                                                            <input type="text" id="experiencia" class="form-control{{ $errors->has('experiencia') ? ' is-invalid' : '' }}" name="experiencia" value="{{ old('experiencia') }}" pattern="[a-zA-Z ]+" placeholder="Experiencia" required>
+                                                            @if ($errors->has('experiencia'))
+                                                                <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $errors->first('experiencia') }}</strong>
+                                                                </span>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                            <small class="text-uppercase font-weight-bold">Servicio</small>
+                                                        </div>
+                                                        <div class="custom-control custom-radio mb-3">
+                                                            <input name="servicio" class="custom-control-input" id="Paseo" checked type="radio" value="Paseo">
+                                                            <label class="custom-control-label" for="Paseo">
+                                                                <span>Paseo</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio mb-3">
+                                                            <input name="servicio" class="custom-control-input" id="Alojamiento" type="radio" value="Alojamiento">
+                                                            <label class="custom-control-label" for="Alojamiento">
+                                                                <span>Alojamiento</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label class="form-control-label" for="image">Subir foto de carnet amberso</label>
+                                                            <input type="file" id="image" class="form-control" name="imagecarnet1" accept="image/*" required/>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="form-group">
-                                                            <label class="form-control-label" for="referencias">Referencias Laborales</label>
-                                                            <input type="text" id="zona" class="form-control form-control-alternative" placeholder="Referencias Laborales">
+                                                            <label class="form-control-label" for="image">Subir foto de carnet reverso</label>
+                                                            <input type="file" id="image" class="form-control" name="imagecarnet2" accept="image/*" required/>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label class="form-control-label" for="aniosdetrabajo">Años de Trabajo</label>
-                                                        <input type="text" id="departamento" class="form-control form-control-alternative" placeholder="#">
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="form-group">
-                                                        <label class="form-control-label" for="referencias">Referencias Laborales</label>
-                                                        <input type="text" id="zona" class="form-control form-control-alternative" placeholder="Referencias Laborales">
-                                                    </div>
-                                                </div>
+                                        </div>
+                                        </div>
+                                        <div class="form-group row mb-0">
+                                            <div class="col-md-12 offset-md-5">
+                                                <button type="submit" class="btn btn-primary">
+                                                    {{ __('Registrarse') }}
+                                                </button>
                                             </div>
-                                        </form>
+                                        </div>
+                                    </form>
                                     </div>
                                 </div>
                             </div>
